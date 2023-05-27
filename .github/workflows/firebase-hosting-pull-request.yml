@@ -9,7 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: npm ci --legacy-peer-deps && npm run build
+      - name: Build
+        run: npm ci --legacy-peer-deps && npm run build
+        env:
+          TWILIO_ACCOUNT_SID: ACf99f3dffb97307959810fb792b3bdda8
+          TWILIO_API_KEY_SID: SK63cd23dc31dea803b1ab5f479eeaee86
+          TWILIO_API_KEY_SECRET: gxJPcR9VgUdf7My10dGARQmxrufclfO9
+          TWILIO_CONVERSATIONS_SERVICE_SID: ISfa419b71bc024826ac0d7b6f36f1de7d
+          REACT_APP_FIREBASE_API_KEY: AIzaSyCg4f8CF0Vo07eTrR6htmQYUwNI7Xh36cY
+          REACT_APP_FIREBASE_AUTH_DOMAIN: mydocappointmentfe.firebaseapp.com
+          REACT_APP_FIREBASE_DATABSE_URL: https://mydocappointmentfe-default-rtdb.firebaseio.com
+          REACT_APP_FIREBASE_PROJECT_ID: mydocappointmentfe
+          REACT_APP_FIREBASE_STORAGE_BUCKET: mydocappointmentfe.appspot.com
+          REACT_APP_MESSAGIN_SENDER_ID: 215489991074
+          REACT_APP_FIREBASE_APP_ID: 1:215489991074:web:d5403aaaf379f56ba0a2fb
+          REACT_APP_MEASUREMENT_ID: G-0MN4H2F8VJ
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
