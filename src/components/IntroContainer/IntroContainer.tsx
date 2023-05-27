@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles, Theme, Typography } from '@material-ui/core';
 import Swoosh from './swoosh';
-import VideoLogo from './VideoLogo';
+import MyDocLogo from './VideoLogo';
 import TwilioLogo from './TwilioLogo';
 import { useAppState } from '../../state';
 import UserMenu from './UserMenu/UserMenu';
@@ -41,7 +41,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: Swoosh,
+    // backgroundImage: Swoosh,
+    backgroundColor: '#673ab7',
     backgroundSize: 'cover',
     width: '296px',
     [theme.breakpoints.down('sm')]: {
@@ -63,12 +64,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         height: '64px',
       },
     },
-  },
-  twilioLogo: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    margin: '20px',
   },
   content: {
     background: 'white',
@@ -100,15 +95,14 @@ const IntroContainer = (props: IntroContainerProps) => {
 
   return (
     <div className={classes.background}>
-      <TwilioLogo className={classes.twilioLogo} />
       {user && location.pathname !== '/login' && <UserMenu />}
       <div className={classes.container}>
         <div className={classes.innerContainer}>
           <div className={classes.swooshContainer}>
             <div className={classes.logoContainer}>
-              <VideoLogo />
+              <MyDocLogo />
               <Typography variant="h6" className={classes.title}>
-                Twilio Programmable Video
+                MyDocAppointment Programable Video
               </Typography>
             </div>
           </div>

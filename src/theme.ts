@@ -60,9 +60,9 @@ export default createTheme({
         },
       },
       outlinedPrimary: {
-        border: '2px solid #027AC5',
+        border: '2px solid #673ab7',
         '&:hover': {
-          border: '2px solid rgb(1, 85, 137)',
+          border: '2px solid #673ab7',
         },
       },
       startIcon: {
@@ -157,10 +157,10 @@ export default createTheme({
   },
   palette: {
     primary: {
-      main: '#027AC5',
+      main: '#673ab7',
     },
   },
-  brand: '#E22525',
+  brand: '#ffd740',
   footerHeight: 72,
   mobileFooterHeight: 56,
   sidebarWidth: 300,
@@ -169,5 +169,5 @@ export default createTheme({
   participantBorderWidth: 2,
   mobileTopBarHeight: 52,
   rightDrawerWidth: 320,
-  galleryViewBackgroundColor: '#121C2D',
+  galleryViewBackgroundColor: '#282a2b',
 });

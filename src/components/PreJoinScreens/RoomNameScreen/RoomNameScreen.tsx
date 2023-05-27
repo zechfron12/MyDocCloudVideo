@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '100%',
   },
   continueButton: {
+    backgroundColor: '#ffd740',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
