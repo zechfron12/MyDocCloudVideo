@@ -24,7 +24,7 @@ jobs:
           REACT_APP_MESSAGIN_SENDER_ID: 215489991074
           REACT_APP_FIREBASE_APP_ID: 1:215489991074:web:d5403aaaf379f56ba0a2fb
           REACT_APP_MEASUREMENT_ID: G-0MN4H2F8VJ
-          REACT_APP_TOKEN_ENDPOINT: https://app-fnaexqzsnq-uc.a.run.app
+          REACT_APP_TOKEN_ENDPOINT: https://app-fnaexqzsnq-uc.a.run.app/token
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
